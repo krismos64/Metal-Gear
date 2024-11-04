@@ -98,3 +98,56 @@ section {
   font-size: 0.9em;
   color: #dcdcdc;
 }
+.story-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.story-card {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  color: #f1f1f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.story-card h2 {
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  font-size: 0.9em;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #00ff00;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #ff6347;
+}
+.story-card img {
+  width: 100%; /* L'image occupe toute la largeur de la carte */
+  height: auto; /* Maintient le rapport d'aspect */
+  max-width: 200px; /* Taille maximale pour uniformiser les jaquettes */
+  margin: 0 auto 15px auto; /* Centrer l'image */
+  border-radius: 5px; /* Ajoute des bords arrondis pour un effet esthétique */
+  display: block;
+}
