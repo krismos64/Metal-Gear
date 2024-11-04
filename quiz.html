@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Metal Gear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Quiz Metal Gear</h1>
+      <p>Testez vos connaissances sur l'univers de Metal Gear</p>
+    </header>
+
+    <main>
+      <section class="quiz">
+        <div id="quiz-container">
+          <div class="question">
+            <h2>1. Quel est le véritable nom de Big Boss ?</h2>
+            <button onclick="checkAnswer(this, 'John')">John</button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'John')">Jack</button>
+            <button onclick="checkAnswer(this, 'John')">David</button>
+          </div>
+          <div class="question">
+            <h2>2. Dans quel jeu apparaît Raiden pour la première fois ?</h2>
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+              Metal Gear Solid
+            </button>
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+              Metal Gear Solid 2
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+              Metal Gear Solid 3
+            </button>
+          </div>
+          <div class="question">
+            <h2>
+              3. Quel personnage est connu pour manipuler la psyché des autres ?
+            </h2>
+            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+              Psycho Mantis
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+              The Sorrow
+            </button>
+            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+              Liquid Snake
+            </button>
+          </div>
+          <div class="question">
+            <h2>4. Qui est le mentor de Big Boss ?</h2>
+            <button onclick="checkAnswer(this, 'The Boss')">The Boss</button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'The Boss')">Zero</button>
+            <button onclick="checkAnswer(this, 'The Boss')">Ocelot</button>
+          </div>
+          <div class="question">
+            <h2>5. Quelle arme est emblématique de Revolver Ocelot ?</h2>
+            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+              Colt Single Action Army
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+              AK-47
+            </button>
+            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+              FAMAS
+            </button>
+          </div>
+          <div class="question">
+            <h2>6. Dans quel jeu Snake affronte-t-il The End, le sniper ?</h2>
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+              Metal Gear Solid 3
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+              Metal Gear Solid
+            </button>
+            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+              Metal Gear Solid 2
+            </button>
+          </div>
+          <div class="question">
+            <h2>7. Quel personnage est surnommé « Old Snake » ?</h2>
+            <button onclick="checkAnswer(this, 'Solid Snake')">
+              Solid Snake
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Solid Snake')">
+              Venom Snake
+            </button>
+            <button onclick="checkAnswer(this, 'Solid Snake')">
+              Naked Snake
+            </button>
+          </div>
+          <div class="question">
+            <h2>8. Quel jeu introduit le concept de la Mother Base ?</h2>
+            <button
+              onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
+            >
+              Metal Gear Solid: Peace Walker
+            </button>
+            <!-- Correct -->
+            <button
+              onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
+            >
+              Metal Gear Solid
+            </button>
+            <button
+              onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
+            >
+              Metal Gear Solid 4
+            </button>
+          </div>
+          <div class="question">
+            <h2>9. Qui est l'ennemi principal dans *Metal Gear Solid V* ?</h2>
+            <button onclick="checkAnswer(this, 'Skull Face')">
+              Skull Face
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Skull Face')">The Boss</button>
+            <button onclick="checkAnswer(this, 'Skull Face')">
+              Solidus Snake
+            </button>
+          </div>
+          <div class="question">
+            <h2>
+              10. Quelle arme spéciale est souvent au centre des complots de la
+              série ?
+            </h2>
+            <button onclick="checkAnswer(this, 'Metal Gear')">
+              Metal Gear
+            </button>
+            <!-- Correct -->
+            <button onclick="checkAnswer(this, 'Metal Gear')">Fulton</button>
+            <button onclick="checkAnswer(this, 'Metal Gear')">Rail Gun</button>
+          </div>
+        </div>
+        <div id="score-container" style="display: none">
+          <h2>Votre score final : <span id="score"></span></h2>
+          <p id="message"></p>
+          <a href="quiz.html">Rejouer le quiz</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
