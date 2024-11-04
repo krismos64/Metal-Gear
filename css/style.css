@@ -151,3 +151,9 @@ section {
   border-radius: 5px; /* Ajoute des bords arrondis pour un effet esthétique */
   display: block;
 }
+.game-cover {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 15px auto;
+  display: block;
+}
