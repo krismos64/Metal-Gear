@@ -370,3 +370,22 @@ button:disabled {
   font-size: 1.2em;
   border-radius: 0 0 10px 10px;
 }
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

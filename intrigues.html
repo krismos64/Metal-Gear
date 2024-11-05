@@ -9,6 +9,19 @@
   <body>
     <header>
       <h1>Résumé des Intrigues</h1>
+      <button onclick="toggleMute()">Activer/Désactiver le son</button>
+      <input
+        type="range"
+        id="volume-control"
+        min="0"
+        max="1"
+        step="0.1"
+        onchange="setVolume(this.value)"
+      />
+      <!-- Lecteur audio pour l'ambiance sonore -->
+      <audio id="background-audio" loop autoplay muted>
+        <source src="audio/ambiance.mp3" type="audio/mp3" />
+      </audio>
       <p>Découvrez les histoires captivantes des différents jeux Metal Gear</p>
       <a href="index.html">Retour à l'accueil</a>
     </header>
@@ -123,5 +136,16 @@
         </div>
       </section>
     </main>
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/audio-controls.js"></script>
   </body>
 </html>
