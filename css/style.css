@@ -389,3 +389,30 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.metal-gear-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #333333; /* Couleur sombre pour le fond */
+  border: 2px solid #666666; /* Bordure gris métallique */
+  font-family: "Arial", sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour effet de relief */
+  border-radius: 5px;
+}
+
+.metal-gear-button:hover {
+  background-color: #555555; /* Couleur plus claire au survol */
+  color: #f0f0f0; /* Couleur légèrement plus claire pour le texte */
+  transform: translateY(-3px); /* Légère élévation pour effet de survol */
+  border-color: #888888; /* Bordure un peu plus claire au survol */
+}
+
+.metal-gear-button:active {
+  transform: translateY(1px); /* Effet de clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

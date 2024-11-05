@@ -18,11 +18,16 @@
         step="0.1"
         onchange="setVolume(this.value)"
       />
+
       <!-- Lecteur audio pour l'ambiance sonore -->
       <audio id="background-audio" loop autoplay muted>
         <source src="audio/ambiance.mp3" type="audio/mp3" />
       </audio>
+
       <p>Testez vos connaissances sur l'univers de Metal Gear</p>
+      <a href="index.html" class="metal-gear-button" id="back-button"
+        >Retour à l'accueil</a
+      >
     </header>
 
     <main>
@@ -30,144 +35,241 @@
         <div id="quiz-container">
           <div class="question">
             <h2>1. Quel est le véritable nom de Big Boss ?</h2>
-            <button onclick="checkAnswer(this, 'John')">John</button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'John')">
+              John
+            </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'John')">Jack</button>
-            <button onclick="checkAnswer(this, 'John')">David</button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'John')">
+              Jack
+            </button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'John')">
+              David
+            </button>
           </div>
+
           <div class="question">
             <h2>2. Dans quel jeu apparaît Raiden pour la première fois ?</h2>
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 2')"
+            >
               Metal Gear Solid
             </button>
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 2')"
+            >
               Metal Gear Solid 2
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 2')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 2')"
+            >
               Metal Gear Solid 3
             </button>
           </div>
+
           <div class="question">
             <h2>
               3. Quel personnage est connu pour manipuler la psyché des autres ?
             </h2>
-            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Psycho Mantis')"
+            >
               Psycho Mantis
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Psycho Mantis')"
+            >
               The Sorrow
             </button>
-            <button onclick="checkAnswer(this, 'Psycho Mantis')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Psycho Mantis')"
+            >
               Liquid Snake
             </button>
           </div>
+
           <div class="question">
             <h2>4. Qui est le mentor de Big Boss ?</h2>
-            <button onclick="checkAnswer(this, 'The Boss')">The Boss</button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'The Boss')">
+              The Boss
+            </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'The Boss')">Zero</button>
-            <button onclick="checkAnswer(this, 'The Boss')">Ocelot</button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'The Boss')">
+              Zero
+            </button>
+            <button class="quiz-button" onclick="checkAnswer(this, 'The Boss')">
+              Ocelot
+            </button>
           </div>
+
           <div class="question">
             <h2>5. Quelle arme est emblématique de Revolver Ocelot ?</h2>
-            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Colt Single Action Army')"
+            >
               Colt Single Action Army
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Colt Single Action Army')"
+            >
               AK-47
             </button>
-            <button onclick="checkAnswer(this, 'Colt Single Action Army')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Colt Single Action Army')"
+            >
               FAMAS
             </button>
           </div>
+
           <div class="question">
             <h2>6. Dans quel jeu Snake affronte-t-il The End, le sniper ?</h2>
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 3')"
+            >
               Metal Gear Solid 3
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 3')"
+            >
               Metal Gear Solid
             </button>
-            <button onclick="checkAnswer(this, 'Metal Gear Solid 3')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear Solid 3')"
+            >
               Metal Gear Solid 2
             </button>
           </div>
+
           <div class="question">
             <h2>7. Quel personnage est surnommé « Old Snake » ?</h2>
-            <button onclick="checkAnswer(this, 'Solid Snake')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Solid Snake')"
+            >
               Solid Snake
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Solid Snake')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Solid Snake')"
+            >
               Venom Snake
             </button>
-            <button onclick="checkAnswer(this, 'Solid Snake')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Solid Snake')"
+            >
               Naked Snake
             </button>
           </div>
+
           <div class="question">
             <h2>8. Quel jeu introduit le concept de la Mother Base ?</h2>
             <button
+              class="quiz-button"
               onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
             >
               Metal Gear Solid: Peace Walker
             </button>
             <!-- Correct -->
             <button
+              class="quiz-button"
               onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
             >
               Metal Gear Solid
             </button>
             <button
+              class="quiz-button"
               onclick="checkAnswer(this, 'Metal Gear Solid: Peace Walker')"
             >
               Metal Gear Solid 4
             </button>
           </div>
+
           <div class="question">
             <h2>9. Qui est l'ennemi principal dans *Metal Gear Solid V* ?</h2>
-            <button onclick="checkAnswer(this, 'Skull Face')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Skull Face')"
+            >
               Skull Face
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Skull Face')">The Boss</button>
-            <button onclick="checkAnswer(this, 'Skull Face')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Skull Face')"
+            >
+              The Boss
+            </button>
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Skull Face')"
+            >
               Solidus Snake
             </button>
           </div>
+
           <div class="question">
             <h2>
               10. Quelle arme spéciale est souvent au centre des complots de la
               série ?
             </h2>
-            <button onclick="checkAnswer(this, 'Metal Gear')">
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear')"
+            >
               Metal Gear
             </button>
             <!-- Correct -->
-            <button onclick="checkAnswer(this, 'Metal Gear')">Fulton</button>
-            <button onclick="checkAnswer(this, 'Metal Gear')">Rail Gun</button>
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear')"
+            >
+              Fulton
+            </button>
+            <button
+              class="quiz-button"
+              onclick="checkAnswer(this, 'Metal Gear')"
+            >
+              Rail Gun
+            </button>
           </div>
         </div>
+
         <div id="score-container" style="display: none">
           <h2>Votre score final : <span id="score"></span></h2>
           <p id="message"></p>
-          <a href="quiz.html">Rejouer le quiz</a>
+          <a href="quiz.html" class="metal-gear-button">Rejouer le quiz</a>
         </div>
       </section>
     </main>
+
     <footer>
       <p>
         Site web réalisé par
-        <a href="https://krismos.fr" target="_blank">krismos64</a>
-        - Ce site est un projet amateur non officiel inspiré par l'univers de
-        Metal Gear.
+        <a href="https://krismos.fr" target="_blank">krismos64</a> - Ce site est
+        un projet amateur non officiel inspiré par l'univers de Metal Gear.
       </p>
     </footer>
+
+    <!-- Scripts -->
     <script src="js/audio-controls.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/button-sounds.js"></script>
   </body>
 </html>
