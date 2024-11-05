@@ -8,31 +8,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <div id="particles-js"></div>
     <header>
       <h1 class="glitch" data-text="METAL GEAR">METAL GEAR</h1>
       <p>Entrez dans l'univers sombre de la légende</p>
+      <button onclick="toggleMute()">Activer/Désactiver le son</button>
+      <input
+        type="range"
+        id="volume-control"
+        min="0"
+        max="1"
+        step="0.1"
+        onchange="setVolume(this.value)"
+      />
     </header>
 
-    <audio id="background-audio" loop autoplay>
+    <!-- Lecteur audio pour l'ambiance sonore -->
+    <audio id="background-audio" loop autoplay muted>
       <source src="audio/ambiance.mp3" type="audio/mp3" />
     </audio>
 
-    <section>
-      <p>
-        Explorez l'histoire de la série, rencontrez les personnages
-        emblématiques et testez vos connaissances !
-      </p>
-      <nav>
-        <ul>
-          <li><a href="personnages.html">Personnages</a></li>
-          <li><a href="intrigues.html">Intrigues</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="commentaires.html">Commentaires</a></li>
-          <li><a href="telechargement.html">Téléchargements</a></li>
-        </ul>
-      </nav>
-    </section>
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
+    <!-- Conteneur principal avec l'image de fond -->
+    <main>
+      <section>
+        <p>
+          Explorez l'histoire de la série, rencontrez les personnages
+          emblématiques et testez vos connaissances !
+        </p>
+        <nav>
+          <ul>
+            <li><a href="personnages.html">Personnages</a></li>
+            <li><a href="intrigues.html">Intrigues</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="commentaires.html">Commentaires</a></li>
+            <li><a href="telechargement.html">Téléchargements</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
 
     <!-- Contrôles du son -->
     <div id="audio-controls">

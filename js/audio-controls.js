@@ -3,7 +3,6 @@ const audioElement = document.getElementById("background-audio");
 
 // Initialisation du son en fonction des valeurs dans localStorage
 window.addEventListener("load", () => {
-  // Lecture du statut et du volume du son dans localStorage
   const isMuted = localStorage.getItem("isMuted") === "true";
   const volume = localStorage.getItem("volume") || 0.5;
 
