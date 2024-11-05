@@ -8,7 +8,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 body::before {
@@ -323,4 +323,50 @@ button:disabled {
   height: 100%;
   z-index: 0; /* Au-dessous du contenu, mais au-dessus du fond */
   pointer-events: none; /* Permet de cliquer sur les éléments de contenu sans interférence */
+}
+/* Container pour les cartes */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style de base pour chaque carte */
+.card {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image de fond de la carte */
+.card-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1); /* Effet de zoom sur l'image au survol */
+}
+
+/* Titre de la carte */
+.card h3 {
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 0 0 10px 10px;
 }
