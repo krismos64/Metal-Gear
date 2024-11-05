@@ -1,5 +1,3 @@
-Metal Gear Quiz
-Description
 Metal Gear Quiz est un projet de quiz interactif basé sur l'univers de la série Metal Gear. Il permet aux utilisateurs de tester leurs connaissances sur les personnages, les intrigues et les éléments emblématiques de la série. Ce projet est une initiative amateur non officielle et ne prétend pas être affilié à Metal Gear ou à ses créateurs.
 
 Fonctionnalités
