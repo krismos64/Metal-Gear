@@ -2,15 +2,22 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metal Gear Chronicles</title>
+    <title>Accueil Metal Gear</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <header>
-      <h1>Bienvenue sur Metal Gear Chronicles</h1>
-      <p>Découvrez l'univers légendaire de Metal Gear</p>
+      <h1 class="glitch" data-text="METAL GEAR">METAL GEAR</h1>
+      <p>Entrez dans l'univers sombre de la légende</p>
     </header>
+
+    <audio id="background-audio" loop autoplay>
+      <source src="audio/ambiance.mp3" type="audio/mp3" />
+    </audio>
+
     <section>
       <p>
         Explorez l'histoire de la série, rencontrez les personnages
@@ -26,5 +33,21 @@
         </ul>
       </nav>
     </section>
+
+    <!-- Contrôles du son -->
+    <div id="audio-controls">
+      <button onclick="toggleMute()">Activer/Désactiver le son</button>
+      <input
+        type="range"
+        id="volume-control"
+        min="0"
+        max="1"
+        step="0.1"
+        onchange="setVolume(this.value)"
+      />
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/audio-controls.js"></script>
   </body>
 </html>

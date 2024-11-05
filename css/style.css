@@ -15,7 +15,66 @@ header {
 h1 {
   color: #ff6347; /* couleur orange/rouge comme dans les jeux */
 }
+h1.glitch {
+  font-size: 3em;
+  position: relative;
+  color: white;
+  margin-top: 20vh;
+  display: inline-block;
+}
 
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  color: red;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(-10px, -10px);
+  }
+  20% {
+    clip: rect(0, 900px, 30px, 0);
+    transform: translate(10px, 10px);
+  }
+  40%,
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip: rect(0, 900px, 30px, 0);
+    transform: translate(-10px, -10px);
+  }
+  40%,
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(0);
+  }
+}
 nav ul {
   list-style: none;
   padding: 0;
@@ -161,7 +220,7 @@ section {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: #1a1a1a;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -171,16 +230,19 @@ section {
 }
 
 button {
-  margin: 5px;
   padding: 10px 20px;
-  cursor: pointer;
+  margin-top: 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  background-color: #444;
+  color: white;
   transition: 0.3s;
 }
 
 button:hover {
-  opacity: 0.9;
+  background-color: #666;
 }
 .correct {
   background-color: green;
@@ -195,4 +257,13 @@ button:hover {
 button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000;
 }
