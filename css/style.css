@@ -281,8 +281,61 @@ section {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.question {
-  margin: 15px 0;
+/* Style pour les questions */
+.question h2 {
+  font-family: "Impact", sans-serif; /* Police en gras pour une question percutante */
+  color: #ff6347; /* Couleur rouge-orangé */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre pour contraste */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour effet de relief */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style pour les boutons de réponses */
+.quiz-button {
+  font-family: "Arial", sans-serif;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 2px solid #333; /* Bordure sombre */
+  border-radius: 8px;
+  background-color: #444; /* Fond sombre pour cohérence avec le thème */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet de profondeur */
+}
+
+/* Effets interactifs pour les boutons */
+.quiz-button:hover {
+  background-color: #555;
+  color: #ff6347; /* Texte change de couleur pour un effet dynamique */
+  transform: translateY(-3px); /* Légère élévation au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Accentuation de l’ombre */
+}
+
+/* Styles pour les boutons lorsqu'ils sont sélectionnés comme corrects ou incorrects */
+.quiz-button.correct {
+  background-color: #4caf50; /* Vert pour une réponse correcte */
+  color: white;
+  border-color: #388e3c;
+}
+
+.quiz-button.incorrect {
+  background-color: #f44336; /* Rouge pour une réponse incorrecte */
+  color: white;
+  border-color: #d32f2f;
+}
+
+/* Style pour le conteneur des questions */
+#quiz-container {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: auto;
 }
 
 button {
@@ -415,4 +468,76 @@ footer a:hover {
 .metal-gear-button:active {
   transform: translateY(1px); /* Effet de clic */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour les écrans de moins de 768px (smartphones) */
+@media (max-width: 768px) {
+  .card-container,
+  .character-gallery,
+  .story-gallery {
+    flex-direction: column; /* Aligne les cartes en colonne */
+    align-items: center; /* Centre les cartes */
+  }
+
+  .card,
+  .character-card,
+  .story-card {
+    width: 90%; /* Prend presque toute la largeur de l'écran */
+    max-width: none; /* Supprime toute restriction de largeur */
+    height: auto; /* Ajuste la hauteur automatiquement pour un meilleur rendu */
+  }
+
+  .card-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour s'assurer que l'image est visible */
+    border-radius: 8px;
+    display: block; /* Assure l'affichage de l'image */
+  }
+
+  .character-card img,
+  .story-card img {
+    height: auto; /* Conserve le rapport d'aspect */
+    width: 100%; /* S'adapte à la largeur de la carte */
+    border-radius: 8px; /* Arrondit légèrement les coins */
+  }
+}
+
+.highlight-text {
+  font-family: "Impact", sans-serif; /* Police forte pour plus d'impact */
+  font-size: 1.5em; /* Agrandit le texte */
+  color: #ff6347; /* Rouge-orangé, rappelant l'ambiance intense de Metal Gear */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour donner un effet de profondeur */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  padding: 10px 15px; /* Espacement autour du texte */
+  border-radius: 5px; /* Coins arrondis pour adoucir l'encadrement */
+  display: inline-block; /* Rend le texte autonome */
+  margin-top: 20px; /* Espace au-dessus pour aérer */
+}
+/* Style pour le conteneur du score final */
+#score-container {
+  display: none; /* Caché par défaut */
+  background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+  color: white;
+  font-family: "Impact", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Ombre pour effet de relief */
+  max-width: 80%; /* Limite la largeur pour éviter de trop s'étendre sur mobile */
+  margin: 20px auto; /* Centre horizontalement */
+  position: fixed; /* Fixe au centre de l'écran */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Au-dessus des autres éléments */
+}
+
+/* Style pour le bouton "Rejouer le quiz" */
+#score-container a.metal-gear-button {
+  margin-top: 20px;
+  font-size: 0.8em;
+  padding: 10px 15px;
 }
