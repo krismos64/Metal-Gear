@@ -13,26 +13,28 @@
       <div class="title-container">
         <h1 class="glitch" data-text="METAL GEAR">METAL GEAR</h1>
         <p class="subtitle">Discutez avec la légende</p>
+
+        <!-- Lecteur audio pour l'ambiance sonore -->
+        <audio id="background-audio" loop autoplay muted>
+          <source src="audio/Metal Gear Solid Theme.mp3" type="audio/mp3" />
+        </audio>
+
+        <div id="sound-prompt">
+          🎵 Cliquez pour activer le son
+          <button onclick="enableSound()">Activer le son</button>
+        </div>
+
+        <!-- Conteneur des particules -->
+        <div id="particles-js"></div>
+
+        <p class="highlight-text">
+          Avec votre Codec, Snake répond à toutes vos questions sur la saga
+          Metal Gear
+        </p>
+        <a href="index.html" class="metal-gear-button" id="back-button"
+        >Retour à l'accueil</a
       </div>
     </header>
-
-    <!-- Lecteur audio pour l'ambiance sonore -->
-    <audio id="background-audio" loop autoplay muted>
-      <source src="audio/Metal Gear Solid Theme.mp3" type="audio/mp3" />
-    </audio>
-
-    <div id="sound-prompt">
-      🎵 Cliquez pour activer le son
-      <button onclick="enableSound()">Activer le son</button>
-    </div>
-
-    <!-- Conteneur des particules -->
-    <div id="particles-js"></div>
-
-    <p class="highlight-text">
-      Avec votre Codec, Snake répond à toutes vos questions sur la saga Metal
-      Gear
-    </p>
     <main>
       <div class="codec-chat-container">
         <div class="codec-header">
