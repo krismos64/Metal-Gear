@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Gear Solid 3: Snake Eater</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Metal Gear Solid 3: Snake Eater</h1>
-      <a href="intrigues.html">Retour aux intrigues</a>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">Jeux Saga Metal Gear</h1>
+        <p class="subtitle">Redécouvrez les jeux</p>
+        <a href="intrigues.html" class="metal-gear-button" id="back-button">
+          Retour à la liste des jeux
+        </a>
+      </div>
     </header>
 
     <!-- Lecteur audio pour l'ambiance sonore -->
@@ -22,69 +29,89 @@
       <button onclick="enableSound()">Activer le son</button>
     </div>
 
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
     <main>
-      <section class="game-details">
-        <!-- Image de la jaquette -->
-        <img
-          src="images/mgs3.jpg"
-          alt="Jaquette de Metal Gear Solid 3: Snake Eater"
-          class="game-cover"
-        />
+      <div class="game-details-wrapper">
+        <section class="game-details">
+          <!-- Image de la jaquette -->
+          <img
+            src="images/mgs3.jpg"
+            alt="Jaquette de Metal Gear Solid 3: Snake Eater"
+            class="game-cover"
+          />
 
-        <!-- Section Résumé -->
-        <h2>Résumé de l'intrigue</h2>
-        <p>
-          Dans les années 1960, Naked Snake est envoyé en URSS pour une mission
-          secrète de sauvetage et d'assassinat. Il doit neutraliser son ancien
-          mentor, The Boss, qui a fait défection aux Soviétiques, et mettre fin
-          aux ambitions de l'arme nucléaire Shagohod. Ce jeu révèle les origines
-          de Big Boss et explore les thèmes de loyauté et de trahison.
-        </p>
+          <!-- Section Résumé -->
+          <h2>Résumé de l'intrigue</h2>
+          <p>
+            Dans les années 1960, Naked Snake est envoyé en URSS pour une
+            mission secrète de sauvetage et d'assassinat. Il doit neutraliser
+            son ancien mentor, The Boss, qui a fait défection aux Soviétiques,
+            et mettre fin aux ambitions de l'arme nucléaire Shagohod. Ce jeu
+            révèle les origines de Big Boss et explore les thèmes de loyauté et
+            de trahison.
+          </p>
 
-        <!-- Section Personnages principaux -->
-        <h2>Personnages principaux</h2>
-        <ul>
-          <li>Naked Snake (Big Boss)</li>
-          <li>The Boss</li>
-          <li>Ocelot</li>
-          <li>Colonel Volgin</li>
-          <li>Eva</li>
-          <li>
-            The Cobra Unit (The End, The Pain, The Fear, The Fury, The Sorrow)
-          </li>
-        </ul>
+          <!-- Section Personnages principaux -->
+          <h2>Personnages principaux</h2>
+          <ul>
+            <li>Naked Snake (Big Boss)</li>
+            <li>The Boss</li>
+            <li>Ocelot</li>
+            <li>Colonel Volgin</li>
+            <li>Eva</li>
+            <li>
+              The Cobra Unit (The End, The Pain, The Fear, The Fury, The Sorrow)
+            </li>
+          </ul>
 
-        <!-- Section Mécaniques de jeu -->
-        <h2>Mécaniques de jeu</h2>
-        <p>
-          Le jeu introduit un environnement de survie en pleine jungle, où le
-          joueur doit chasser, se camoufler et utiliser des techniques de
-          guérison pour survivre. L’infiltration et le camouflage sont cruciaux
-          pour progresser sans se faire repérer dans cet environnement hostile.
-        </p>
+          <!-- Section Mécaniques de jeu -->
+          <h2>Mécaniques de jeu</h2>
+          <p>
+            Le jeu introduit un environnement de survie en pleine jungle, où le
+            joueur doit chasser, se camoufler et utiliser des techniques de
+            guérison pour survivre. L’infiltration et le camouflage sont
+            cruciaux pour progresser sans se faire repérer dans cet
+            environnement hostile.
+          </p>
 
-        <!-- Section Anecdotes -->
-        <h2>Anecdotes et faits intéressants</h2>
-        <ul>
-          <li>
-            Le combat contre The End, un sniper âgé, est l'un des combats de
-            boss les plus mémorables et peut durer plusieurs heures. Il est
-            possible de vaincre The End en changeant la date de la console pour
-            le faire mourir de vieillesse.
-          </li>
-          <li>
-            Le jeu a été salué pour ses cinématiques détaillées et son scénario
-            complexe, qui explore des thèmes profonds comme la guerre, la
-            loyauté et le sacrifice.
-          </li>
-          <li>
-            Hideo Kojima a conçu ce jeu pour en faire un prélude, racontant les
-            origines de Big Boss et les événements ayant façonné sa vision du
-            monde.
-          </li>
-        </ul>
-      </section>
+          <!-- Section Anecdotes -->
+          <h2>Anecdotes et faits intéressants</h2>
+          <ul>
+            <li>
+              Le combat contre The End, un sniper âgé, est l'un des combats de
+              boss les plus mémorables et peut durer plusieurs heures. Il est
+              possible de vaincre The End en changeant la date de la console
+              pour le faire mourir de vieillesse.
+            </li>
+            <li>
+              Le jeu a été salué pour ses cinématiques détaillées et son
+              scénario complexe, qui explore des thèmes profonds comme la
+              guerre, la loyauté et le sacrifice.
+            </li>
+            <li>
+              Hideo Kojima a conçu ce jeu pour en faire un prélude, racontant
+              les origines de Big Boss et les événements ayant façonné sa vision
+              du monde.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
+    <script src="js/button-sounds.js"></script>
   </body>
 </html>

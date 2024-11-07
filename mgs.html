@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Gear Solid</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Metal Gear Solid</h1>
-      <a href="intrigues.html">Retour aux intrigues</a>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">Jeux Saga Metal Gear</h1>
+        <p class="subtitle">Redécouvrez les jeux</p>
+        <a href="intrigues.html" class="metal-gear-button" id="back-button">
+          Retour à la liste des jeux
+        </a>
+      </div>
     </header>
 
     <!-- Lecteur audio pour l'ambiance sonore -->
@@ -22,57 +29,75 @@
       <button onclick="enableSound()">Activer le son</button>
     </div>
 
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
     <main>
-      <section class="game-details">
-        <!-- Image de la jaquette -->
-        <img
-          src="images/mgs1.jpg"
-          alt="Jaquette de Metal Gear Solid"
-          class="game-cover"
-        />
+      <div class="game-details-wrapper">
+        <section class="game-details">
+          <!-- Image de la jaquette -->
+          <img
+            src="images/mgs1.jpg"
+            alt="Jaquette de Metal Gear Solid"
+            class="game-cover"
+          />
 
-        <!-- Section Résumé -->
-        <h2>Résumé de l'intrigue</h2>
-        <p>
-          Solid Snake est envoyé pour infiltrer la base de Shadow Moses, prise
-          d'assaut par des membres renégats de FOXHOUND, menaçant d'utiliser une
-          arme nucléaire. Il doit non seulement déjouer cette menace, mais aussi
-          faire face à son frère génétique, Liquid Snake.
-        </p>
+          <!-- Section Résumé -->
+          <h2>Résumé de l'intrigue</h2>
+          <p>
+            Solid Snake est envoyé pour infiltrer la base de Shadow Moses, prise
+            d'assaut par des membres renégats de FOXHOUND, menaçant d'utiliser
+            une arme nucléaire. Il doit non seulement déjouer cette menace, mais
+            aussi faire face à son frère génétique, Liquid Snake.
+          </p>
 
-        <!-- Section Personnages principaux -->
-        <h2>Personnages principaux</h2>
-        <ul>
-          <li>Solid Snake</li>
-          <li>Liquid Snake</li>
-          <li>Revolver Ocelot</li>
-          <li>Meryl Silverburgh</li>
-          <li>Gray Fox</li>
-        </ul>
+          <!-- Section Personnages principaux -->
+          <h2>Personnages principaux</h2>
+          <ul>
+            <li>Solid Snake</li>
+            <li>Liquid Snake</li>
+            <li>Revolver Ocelot</li>
+            <li>Meryl Silverburgh</li>
+            <li>Gray Fox</li>
+          </ul>
 
-        <!-- Section Mécaniques de jeu -->
-        <h2>Mécaniques de jeu</h2>
-        <p>
-          Le jeu introduit des mécaniques d'infiltration uniques pour l'époque,
-          mettant en avant la discrétion, l'usage de gadgets, et la gestion des
-          munitions pour progresser sans se faire repérer.
-        </p>
+          <!-- Section Mécaniques de jeu -->
+          <h2>Mécaniques de jeu</h2>
+          <p>
+            Le jeu introduit des mécaniques d'infiltration uniques pour
+            l'époque, mettant en avant la discrétion, l'usage de gadgets, et la
+            gestion des munitions pour progresser sans se faire repérer.
+          </p>
 
-        <!-- Section Anecdotes -->
-        <h2>Anecdotes et faits intéressants</h2>
-        <ul>
-          <li>
-            Le combat contre Psycho Mantis est célèbre pour sa mécanique
-            innovante, demandant aux joueurs de changer de port de manette pour
-            le vaincre.
-          </li>
-          <li>
-            C’est le premier jeu de la série à introduire des cinématiques et
-            des dialogues longs, approfondissant le récit et les personnages.
-          </li>
-        </ul>
-      </section>
+          <!-- Section Anecdotes -->
+          <h2>Anecdotes et faits intéressants</h2>
+          <ul>
+            <li>
+              Le combat contre Psycho Mantis est célèbre pour sa mécanique
+              innovante, demandant aux joueurs de changer de port de manette
+              pour le vaincre.
+            </li>
+            <li>
+              C’est le premier jeu de la série à introduire des cinématiques et
+              des dialogues longs, approfondissant le récit et les personnages.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
+    <script src="js/button-sounds.js"></script>
   </body>
 </html>

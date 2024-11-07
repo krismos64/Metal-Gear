@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Gear Solid: Peace Walker</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Metal Gear Solid: Peace Walker</h1>
-      <a href="intrigues.html">Retour aux intrigues</a>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">Jeux Saga Metal Gear</h1>
+        <p class="subtitle">Redécouvrez les jeux</p>
+        <a href="intrigues.html" class="metal-gear-button" id="back-button">
+          Retour à la liste des jeux
+        </a>
+      </div>
     </header>
 
     <!-- Lecteur audio pour l'ambiance sonore -->
@@ -22,65 +29,84 @@
       <button onclick="enableSound()">Activer le son</button>
     </div>
 
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
     <main>
-      <section class="game-details">
-        <!-- Image de la jaquette -->
-        <img
-          src="images/peacewalker.jpg"
-          alt="Jaquette de Metal Gear Solid: Peace Walker"
-          class="game-cover"
-        />
+      <div class="game-details-wrapper">
+        <section class="game-details">
+          <!-- Image de la jaquette -->
+          <img
+            src="images/peacewalker.jpg"
+            alt="Jaquette de Metal Gear Solid: Peace Walker"
+            class="game-cover"
+          />
 
-        <!-- Section Résumé -->
-        <h2>Résumé de l'intrigue</h2>
-        <p>
-          Se déroulant dans les années 1970, *Peace Walker* suit Big Boss,
-          maintenant à la tête de l’organisation militaire indépendante
-          Militaires Sans Frontières (MSF). Lorsqu’une mystérieuse menace
-          nucléaire apparaît au Costa Rica, il accepte une mission pour
-          enquêter. Le jeu explore les idéaux de paix, de guerre et les luttes
-          morales de Big Boss dans sa quête pour se libérer de son passé.
-        </p>
+          <!-- Section Résumé -->
+          <h2>Résumé de l'intrigue</h2>
+          <p>
+            Se déroulant dans les années 1970, *Peace Walker* suit Big Boss,
+            maintenant à la tête de l’organisation militaire indépendante
+            Militaires Sans Frontières (MSF). Lorsqu’une mystérieuse menace
+            nucléaire apparaît au Costa Rica, il accepte une mission pour
+            enquêter. Le jeu explore les idéaux de paix, de guerre et les luttes
+            morales de Big Boss dans sa quête pour se libérer de son passé.
+          </p>
 
-        <!-- Section Personnages principaux -->
-        <h2>Personnages principaux</h2>
-        <ul>
-          <li>Big Boss (Naked Snake)</li>
-          <li>Kazuhira Miller</li>
-          <li>Paz Ortega Andrade</li>
-          <li>Huey Emmerich</li>
-          <li>Coldman</li>
-          <li>Strangelove</li>
-        </ul>
+          <!-- Section Personnages principaux -->
+          <h2>Personnages principaux</h2>
+          <ul>
+            <li>Big Boss (Naked Snake)</li>
+            <li>Kazuhira Miller</li>
+            <li>Paz Ortega Andrade</li>
+            <li>Huey Emmerich</li>
+            <li>Coldman</li>
+            <li>Strangelove</li>
+          </ul>
 
-        <!-- Section Mécaniques de jeu -->
-        <h2>Mécaniques de jeu</h2>
-        <p>
-          Le jeu introduit des missions coopératives, permettant à plusieurs
-          joueurs de travailler ensemble pour accomplir des objectifs. Il ajoute
-          également des éléments de gestion de base, où les joueurs peuvent
-          recruter des soldats et développer des armes pour renforcer la MSF.
-        </p>
+          <!-- Section Mécaniques de jeu -->
+          <h2>Mécaniques de jeu</h2>
+          <p>
+            Le jeu introduit des missions coopératives, permettant à plusieurs
+            joueurs de travailler ensemble pour accomplir des objectifs. Il
+            ajoute également des éléments de gestion de base, où les joueurs
+            peuvent recruter des soldats et développer des armes pour renforcer
+            la MSF.
+          </p>
 
-        <!-- Section Anecdotes -->
-        <h2>Anecdotes et faits intéressants</h2>
-        <ul>
-          <li>
-            *Peace Walker* a été initialement développé pour la PSP, mais a
-            ensuite été remasterisé pour les consoles de salon.
-          </li>
-          <li>
-            Le jeu a été conçu comme une "suite directe" de *Metal Gear Solid
-            3*, approfondissant les motivations de Big Boss et la fondation de
-            son armée.
-          </li>
-          <li>
-            Le titre explore des thèmes philosophiques sur la dissuasion
-            nucléaire et le concept de paix par la force.
-          </li>
-        </ul>
-      </section>
+          <!-- Section Anecdotes -->
+          <h2>Anecdotes et faits intéressants</h2>
+          <ul>
+            <li>
+              *Peace Walker* a été initialement développé pour la PSP, mais a
+              ensuite été remasterisé pour les consoles de salon.
+            </li>
+            <li>
+              Le jeu a été conçu comme une "suite directe" de *Metal Gear Solid
+              3*, approfondissant les motivations de Big Boss et la fondation de
+              son armée.
+            </li>
+            <li>
+              Le titre explore des thèmes philosophiques sur la dissuasion
+              nucléaire et le concept de paix par la force.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
+    <script src="js/button-sounds.js"></script>
   </body>
 </html>
