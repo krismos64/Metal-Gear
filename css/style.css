@@ -653,7 +653,7 @@ footer a:hover {
 .codec-chat-container {
   width: 80%;
   max-width: 600px;
-  margin: 50px auto;
+  margin: 60px auto;
   background-color: #000;
   color: #00ff00;
   border: 3px solid #00ff00;
@@ -661,7 +661,7 @@ footer a:hover {
   font-family: "Courier New", monospace;
   text-align: center;
   height: 100vh; /* Prend toute la hauteur de l'écran */
-  max-height: 800px; /* Limite la hauteur maximale sur les grands écrans */
+  max-height: 500px; /* Limite la hauteur maximale sur les grands écrans */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -699,9 +699,8 @@ footer a:hover {
 
 /* Fenêtre de chat pour afficher les messages */
 .codec-chat-window {
-  flex-grow: 1; /* Permet à la fenêtre de chat de s'étendre dans l'espace disponible */
-  min-height: 30vh; /* Ajuste la hauteur minimale à environ 30% de la hauteur de l'écran */
-  max-height: 50vh; /* Limite la hauteur maximale à environ 50% de l'écran */
+  height: 300px; /* Hauteur fixe qui convient pour la plupart des écrans */
+  max-height: 50vh; /* Limite à la moitié de la hauteur de l'écran sur les petits écrans */
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
