@@ -660,6 +660,11 @@ footer a:hover {
   padding: 20px;
   font-family: "Courier New", monospace;
   text-align: center;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  max-height: 800px; /* Limite la hauteur maximale sur les grands écrans */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* En-tête avec les avatars et informations */
@@ -694,29 +699,14 @@ footer a:hover {
 
 /* Fenêtre de chat pour afficher les messages */
 .codec-chat-window {
-  height: 200px;
+  flex-grow: 1; /* Permet à la fenêtre de chat de s'étendre dans l'espace disponible */
+  min-height: 30vh; /* Ajuste la hauteur minimale à environ 30% de la hauteur de l'écran */
+  max-height: 50vh; /* Limite la hauteur maximale à environ 50% de l'écran */
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
   border: 2px solid #00ff00;
   margin-bottom: 10px;
-}
-.codec-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#user-input {
-  width: calc(
-    100% - 80px
-  ); /* Prend presque toute la largeur, moins l'espace pour le bouton */
-  padding: 10px;
-  font-family: "Courier New", monospace;
-  color: #00ff00;
-  background-color: #000;
-  border: 2px solid #00ff00;
-  margin-right: 10px;
 }
 
 /* Style des messages de chat */
@@ -734,7 +724,9 @@ footer a:hover {
 }
 
 #user-input {
-  width: 70%;
+  width: calc(
+    100% - 80px
+  ); /* Prend presque toute la largeur, moins l'espace pour le bouton */
   padding: 10px;
   font-family: "Courier New", monospace;
   color: #00ff00;
