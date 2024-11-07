@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Gear Rising: Revengeance</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Metal Gear Rising: Revengeance</h1>
-      <a href="intrigues.html">Retour aux intrigues</a>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">Jeux Saga Metal Gear</h1>
+        <p class="subtitle">Redécouvrez les jeux</p>
+        <a href="intrigues.html" class="metal-gear-button" id="back-button"
+          >Retour à la liste des jeux</a
+        >
+      </div>
     </header>
 
     <!-- Lecteur audio pour l'ambiance sonore -->
@@ -22,65 +29,83 @@
       <button onclick="enableSound()">Activer le son</button>
     </div>
 
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
     <main>
-      <section class="game-details">
-        <!-- Image de la jaquette -->
-        <img
-          src="images/mgr.jpg"
-          alt="Jaquette de Metal Gear Rising: Revengeance"
-          class="game-cover"
-        />
+      <div class="game-details-wrapper">
+        <section class="game-details">
+          <!-- Image de la jaquette -->
+          <img
+            src="images/mgr.jpg"
+            alt="Jaquette de Metal Gear Rising: Revengeance"
+            class="game-cover"
+          />
 
-        <!-- Section Résumé -->
-        <h2>Résumé de l'intrigue</h2>
-        <p>
-          Dans *Metal Gear Rising: Revengeance*, Raiden, ancien soldat
-          transformé en cyborg ninja, combat une organisation terroriste qui
-          menace la paix mondiale. Le jeu, qui se déroule après les événements
-          de *Metal Gear Solid 4*, explore le conflit intérieur de Raiden et son
-          combat contre ses propres traumatismes.
-        </p>
+          <!-- Section Résumé -->
 
-        <!-- Section Personnages principaux -->
-        <h2>Personnages principaux</h2>
-        <ul>
-          <li>Raiden</li>
-          <li>Samuel Rodrigues (Jetstream Sam)</li>
-          <li>Sundowner</li>
-          <li>Mistral</li>
-          <li>Monsoon</li>
-          <li>Bladewolf</li>
-        </ul>
+          <h2>Résumé de l'intrigue</h2>
+          <p>
+            Dans *Metal Gear Rising: Revengeance*, Raiden, ancien soldat
+            transformé en cyborg ninja, combat une organisation terroriste qui
+            menace la paix mondiale. Le jeu, qui se déroule après les événements
+            de *Metal Gear Solid 4*, explore le conflit intérieur de Raiden et
+            son combat contre ses propres traumatismes.
+          </p>
 
-        <!-- Section Mécaniques de jeu -->
-        <h2>Mécaniques de jeu</h2>
-        <p>
-          Le jeu introduit des combats d'action rapide basés sur des attaques de
-          découpe précises, où les joueurs peuvent trancher des ennemis et des
-          objets avec une précision incroyable. Le système de combat inclut
-          également un mode "Blade Mode" permettant aux joueurs de ralentir le
-          temps pour cibler des points précis.
-        </p>
+          <!-- Section Personnages principaux -->
+          <h2>Personnages principaux</h2>
+          <ul>
+            <li>Raiden</li>
+            <li>Samuel Rodrigues (Jetstream Sam)</li>
+            <li>Sundowner</li>
+            <li>Mistral</li>
+            <li>Monsoon</li>
+            <li>Bladewolf</li>
+          </ul>
 
-        <!-- Section Anecdotes -->
-        <h2>Anecdotes et faits intéressants</h2>
-        <ul>
-          <li>
-            *Metal Gear Rising: Revengeance* a été développé en collaboration
-            avec PlatinumGames, connu pour ses jeux d'action intense.
-          </li>
-          <li>
-            Contrairement aux autres jeux de la série, *Revengeance* se
-            concentre davantage sur l’action que sur la furtivité.
-          </li>
-          <li>
-            Le personnage de Jetstream Sam est devenu un favori des fans, et il
-            a reçu son propre contenu téléchargeable (DLC) pour explorer son
-            histoire.
-          </li>
-        </ul>
-      </section>
+          <!-- Section Mécaniques de jeu -->
+          <h2>Mécaniques de jeu</h2>
+          <p>
+            Le jeu introduit des combats d'action rapide basés sur des attaques
+            de découpe précises, où les joueurs peuvent trancher des ennemis et
+            des objets avec une précision incroyable. Le système de combat
+            inclut également un mode "Blade Mode" permettant aux joueurs de
+            ralentir le temps pour cibler des points précis.
+          </p>
+
+          <!-- Section Anecdotes -->
+          <h2>Anecdotes et faits intéressants</h2>
+          <ul>
+            <li>
+              *Metal Gear Rising: Revengeance* a été développé en collaboration
+              avec PlatinumGames, connu pour ses jeux d'action intense.
+            </li>
+            <li>
+              Contrairement aux autres jeux de la série, *Revengeance* se
+              concentre davantage sur l’action que sur la furtivité.
+            </li>
+            <li>
+              Le personnage de Jetstream Sam est devenu un favori des fans, et
+              il a reçu son propre contenu téléchargeable (DLC) pour explorer
+              son histoire.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
+    <script src="js/button-sounds.js"></script>
   </body>
 </html>

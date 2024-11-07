@@ -619,3 +619,32 @@ footer a:hover {
   font-size: 0.8em;
   padding: 10px 15px;
 }
+
+/* Style pour les résumés des jeux en détail */
+.game-details-wrapper {
+  background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
+  padding: 20px;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Ombre pour effet de profondeur */
+  margin: 20px auto;
+  max-width: 800px; /* Limite la largeur pour un affichage central */
+  border: 2px solid #ff6347; /* Bordure rouge-orangé rappelant le thème */
+}
+
+.game-details h2 {
+  color: #ff6347; /* Couleur de texte pour les titres */
+  font-family: "Impact", sans-serif;
+  margin-top: 20px;
+}
+
+.game-details p,
+.game-details ul {
+  color: #dcdcdc; /* Couleur du texte pour meilleure lisibilité */
+  line-height: 1.6;
+}
+
+.game-cover {
+  max-width: 50%; /* L'image s'adapte à la largeur */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
