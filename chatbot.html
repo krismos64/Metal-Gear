@@ -5,20 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot Metal Gear</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
-    <header id="header-container" class="header-centered"></header>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">METAL GEAR</h1>
+        <p class="subtitle">Discutez avec la légende</p>
+      </div>
+    </header>
 
+    <!-- Lecteur audio pour l'ambiance sonore -->
+    <audio id="background-audio" loop autoplay muted>
+      <source src="audio/Metal Gear Solid Theme.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="sound-prompt">
+      🎵 Cliquez pour activer le son
+      <button onclick="enableSound()">Activer le son</button>
+    </div>
+
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
+
+    <p class="highlight-text">
+      Avec votre Codec, Snake répond à toutes vos questions sur la saga Metal
+      Gear
+    </p>
     <main>
       <div class="codec-chat-container">
         <div class="codec-header">
           <div class="codec-left">
-            <img src="images/otacon.jpg" alt="User 1" class="codec-avatar" />
+            <img src="images/chris2.jpg" alt="User 1" class="codec-avatar" />
           </div>
           <div class="codec-center">
             <p>PTT</p>
             <div class="codec-bar"></div>
-            <p>14 L 12</p>
+            <p>140.85</p>
           </div>
           <div class="codec-right">
             <img
@@ -44,8 +68,19 @@
       </div>
     </main>
 
-    <footer id="footer-container"></footer>
-
+    <footer>
+      <p>
+        Site web réalisé par
+        <a href="https://krismos.fr" target="_blank"
+          >Christophe Mostefaoui (krismos64)</a
+        >
+        - Ce site est un projet amateur non officiel inspiré par l'univers de
+        Metal Gear.
+      </p>
+    </footer>
+    <script src="js/animations.js"></script>
+    <script src="js/audio-controls.js"></script>
+    <script src="js/button-sounds.js"></script>
     <script src="js/loadPartials.js"></script>
     <script src="js/chatbot.js"></script>
   </body>
