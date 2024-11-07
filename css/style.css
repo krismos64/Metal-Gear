@@ -701,6 +701,23 @@ footer a:hover {
   border: 2px solid #00ff00;
   margin-bottom: 10px;
 }
+.codec-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-input {
+  width: calc(
+    100% - 80px
+  ); /* Prend presque toute la largeur, moins l'espace pour le bouton */
+  padding: 10px;
+  font-family: "Courier New", monospace;
+  color: #00ff00;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  margin-right: 10px;
+}
 
 /* Style des messages de chat */
 .chat-message {
