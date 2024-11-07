@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Metal Gear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="header-container" class="header-centered"></header>
+
+    <main>
+      <div class="codec-chat-container">
+        <div class="codec-header">
+          <div class="codec-left">
+            <img src="images/otacon.jpg" alt="User 1" class="codec-avatar" />
+          </div>
+          <div class="codec-center">
+            <p>PTT</p>
+            <div class="codec-bar"></div>
+            <p>14 L 12</p>
+          </div>
+          <div class="codec-right">
+            <img
+              src="images/solid_snake.jpg"
+              alt="User 2"
+              class="codec-avatar"
+            />
+          </div>
+        </div>
+
+        <div class="codec-chat-window" id="chat-window">
+          <!-- Messages apparaîtront ici -->
+        </div>
+
+        <div class="codec-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Écrivez votre message..."
+          />
+          <button onclick="sendMessage()">Envoyer</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="js/loadPartials.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

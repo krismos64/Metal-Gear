@@ -648,3 +648,88 @@ footer a:hover {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+
+/* Conteneur principal du chatbot en style codec */
+.codec-chat-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #000;
+  color: #00ff00;
+  border: 3px solid #00ff00;
+  padding: 20px;
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
+
+/* En-tête avec les avatars et informations */
+.codec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.codec-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 3px solid #00ff00;
+  padding: 10px;
+}
+
+.codec-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00ff00;
+}
+
+.codec-bar {
+  width: 80px;
+  height: 10px;
+  background-color: #00ff00;
+  margin: 5px 0;
+}
+
+/* Fenêtre de chat pour afficher les messages */
+.codec-chat-window {
+  height: 200px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border: 2px solid #00ff00;
+  margin-bottom: 10px;
+}
+
+/* Style des messages de chat */
+.chat-message {
+  color: #00ff00;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+/* Zone de saisie */
+.codec-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-input {
+  width: 70%;
+  padding: 10px;
+  font-family: "Courier New", monospace;
+  color: #00ff00;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #000;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  cursor: pointer;
+}
