@@ -10,6 +10,11 @@ window.addEventListener("load", () => {
   audioElement.muted = isMuted;
   audioElement.volume = volume;
 
+  // Lancer la lecture automatiquement en mode muet
+  audioElement.play().catch((error) => {
+    console.log("Autoplay bloqué, l’utilisateur devra activer manuellement.");
+  });
+
   // Mise à jour du contrôle de volume
   document.getElementById("volume-control").value = volume;
 });
@@ -24,4 +29,9 @@ function toggleMute() {
 function setVolume(value) {
   audioElement.volume = value;
   localStorage.setItem("volume", value);
+}
+function enableSound() {
+  audioElement.muted = false;
+  audioElement.play();
+  document.getElementById("sound-prompt").style.display = "none"; // Masque le message une fois cliqué
 }

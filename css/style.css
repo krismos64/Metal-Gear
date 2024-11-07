@@ -56,16 +56,39 @@ main::before {
   z-index: -1;
 }
 
-header,
-#audio-controls,
-section {
-  position: relative;
-  z-index: 1; /* Pour être au-dessus de l'image de fond */
+#sound-prompt {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.85
+  ); /* Fond légèrement opaque pour une meilleure lisibilité */
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  z-index: 1001; /* Au-dessus de la plupart des éléments */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-#volume-control {
-  width: 150px;
-  margin-top: 10px;
+#sound-prompt button {
+  margin-left: 10px;
+  background-color: #444;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#sound-prompt button:hover {
+  background-color: #666;
 }
 
 h1 {

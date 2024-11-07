@@ -9,20 +9,16 @@
   <body>
     <header>
       <h1>Quiz Metal Gear</h1>
-      <button onclick="toggleMute()">Activer/Désactiver le son</button>
-      <input
-        type="range"
-        id="volume-control"
-        min="0"
-        max="1"
-        step="0.1"
-        onchange="setVolume(this.value)"
-      />
 
       <!-- Lecteur audio pour l'ambiance sonore -->
       <audio id="background-audio" loop autoplay muted>
-        <source src="audio/ambiance.mp3" type="audio/mp3" />
+        <source src="audio/quiz.mp3" type="audio/mp3" />
       </audio>
+
+      <div id="sound-prompt">
+        🎵 Cliquez pour activer le son
+        <button onclick="enableSound()">Activer le son</button>
+      </div>
 
       <p>Testez vos connaissances sur l'univers de Metal Gear</p>
       <a href="index.html" class="metal-gear-button" id="back-button"
