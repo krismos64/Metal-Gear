@@ -12,6 +12,16 @@
       <a href="intrigues.html">Retour aux intrigues</a>
     </header>
 
+    <!-- Lecteur audio pour l'ambiance sonore -->
+    <audio id="background-audio" loop autoplay muted>
+      <source src="audio/jeux.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="sound-prompt">
+      🎵 Cliquez pour activer le son
+      <button onclick="enableSound()">Activer le son</button>
+    </div>
+
     <main>
       <section class="game-details">
         <!-- Image de la jaquette -->
@@ -72,5 +82,6 @@
         </ul>
       </section>
     </main>
+    <script src="js/audio-controls.js"></script>
   </body>
 </html>

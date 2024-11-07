@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Résumé des Intrigues</h1>
-      <!-- Lecteur audio pour l'ambiance sonore -->
-      <audio id="background-audio" loop autoplay muted>
-        <source src="audio/ambiance.mp3" type="audio/mp3" />
-      </audio>
-
-      <div id="sound-prompt">
-        🎵 Cliquez pour activer le son
-        <button onclick="enableSound()">Activer le son</button>
+    <header class="header-centered">
+      <div class="title-container">
+        <h1 class="glitch" data-text="METAL GEAR">Résumé des Intrigues</h1>
+        <p class="subtitle">
+          Découvrez les histoires captivantes des différents jeux Metal Gear
+        </p>
+        <a href="index.html" class="metal-gear-button" id="back-button"
+          >Retour à l'accueil</a
+        >
       </div>
-
-      <p>Découvrez les histoires captivantes des différents jeux Metal Gear</p>
-      <a href="index.html" class="metal-gear-button" id="back-button"
-        >Retour à l'accueil</a
-      >
     </header>
+
+    <!-- Lecteur audio pour l'ambiance sonore -->
+    <audio id="background-audio" loop autoplay muted>
+      <source src="audio/ambiance.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="sound-prompt">
+      🎵 Cliquez pour activer le son
+      <button onclick="enableSound()">Activer le son</button>
+    </div>
+
     <main>
       <section class="story-gallery">
         <!-- Metal Gear Solid -->

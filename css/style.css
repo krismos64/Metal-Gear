@@ -23,11 +23,31 @@ body::before {
 }
 header {
   background-color: rgba(51, 51, 51, 0.8); /* 80% opaque */
+  text-align: center; /* Centre le contenu du header */
   padding: 20px;
   color: white;
   position: relative;
   z-index: 1; /* Pour que le header reste au-dessus de l'image de fond */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+/* Header pour centrer tout le contenu */
+.header-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Prend la hauteur de la fenêtre */
+  text-align: center;
+}
+
+/* Conteneur pour le titre et le sous-titre, centré en colonne */
+.title-container {
+  display: flex;
+  flex-direction: column; /* Arrange le titre et le sous-titre en colonne */
+  align-items: center; /* Centre horizontalement */
+}
+
 /* Image de fond appliquée au conteneur <main> */
 main {
   background-image: url("../images/metal-gear-background.jpg");
@@ -101,7 +121,11 @@ h1.glitch {
   margin-top: 20vh;
   display: inline-block;
 }
-
+.glitch {
+  font-size: 3em;
+  margin-bottom: 20px; /* Espacement entre le titre et le sous-titre */
+  color: #ff6347;
+}
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
@@ -154,6 +178,37 @@ h1.glitch {
     transform: translate(0);
   }
 }
+/* Ajustements pour le sous-titre */
+.subtitle {
+  font-family: "Impact", sans-serif;
+  color: #ff6347;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), -2px -2px 8px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  animation: flicker 1s infinite;
+}
+
+/* Animation de scintillement pour effet dramatique */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.7;
+  }
+}
+
 nav ul {
   list-style: none;
   padding: 0;
