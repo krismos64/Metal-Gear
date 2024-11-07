@@ -547,6 +547,9 @@ footer a:hover {
   transform: translateY(1px); /* Effet de clic */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+#back-button {
+  margin: 20px;
+}
 
 /* Styles pour les écrans de moins de 768px (smartphones) */
 @media (max-width: 768px) {
@@ -740,4 +743,9 @@ button {
   color: #00ff00;
   border: 2px solid #00ff00;
   cursor: pointer;
+}
+/* Style pour agrandir les avatars en mode plein écran */
+.fullscreen-avatar .codec-avatar {
+  width: 200px; /* Taille augmentée */
+  height: 200px; /* Taille augmentée */
 }
