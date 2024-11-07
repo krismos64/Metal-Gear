@@ -749,3 +749,24 @@ button {
   width: 200px; /* Taille augmentée */
   height: 200px; /* Taille augmentée */
 }
+
+/* Style pour le bouton de fermeture en plein écran */
+.close-fullscreen-button {
+  display: none; /* Par défaut, le bouton est caché */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000; /* Assure que le bouton est au-dessus de tout */
+  border-radius: 5px;
+}
+
+/* Affiche la croix de fermeture en mode plein écran */
+.fullscreen .close-fullscreen-button {
+  display: block;
+}
