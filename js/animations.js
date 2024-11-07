@@ -1,13 +1,13 @@
 // Configuration Particles.js
 particlesJS("particles-js", {
   particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
+    number: { value: 110, density: { enable: true, value_area: 800 } },
     color: { value: "#ffffff" },
     shape: { type: "circle" },
-    opacity: { value: 0.5, random: true },
-    size: { value: 3, random: true },
+    opacity: { value: 5.5, random: true },
+    size: { value: 5, random: true },
     line_linked: { enable: false },
-    move: { enable: true, speed: 6, direction: "none" },
+    move: { enable: true, speed: 4, direction: "none" },
   },
 });
 

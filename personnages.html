@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personnages - Metal Gear Chronicles</title>
+    <title>Personnages - Metal Gear</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
   <body>
     <header class="header-centered">
@@ -28,6 +30,9 @@
       🎵 Cliquez pour activer le son
       <button onclick="enableSound()">Activer le son</button>
     </div>
+
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
 
     <main>
       <section class="character-gallery">
@@ -309,6 +314,7 @@
         Metal Gear.
       </p>
     </footer>
+    <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
     <script src="js/button-sounds.js"></script>
   </body>
