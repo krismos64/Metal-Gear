@@ -11,7 +11,7 @@ export async function handler(event, context) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4-turbo", // ou "gpt-4" si c’est le bon modèle
         messages: [
           {
             role: "system",
@@ -25,11 +25,20 @@ export async function handler(event, context) {
     });
 
     const data = await response.json();
-    console.log("Réponse de l'API OpenAI :", data); // Log pour vérifier la réponse complète
+    console.log(
+      "Réponse complète de l'API OpenAI :",
+      JSON.stringify(data, null, 2)
+    );
 
-    if (!data.choices || !data.choices[0]) {
+    // Vérifier si "choices" est défini et contient au moins un élément
+    if (
+      !data.choices ||
+      data.choices.length === 0 ||
+      !data.choices[0].message
+    ) {
       throw new Error(
-        "La réponse de l'API OpenAI ne contient pas de choix valides."
+        "La réponse de l'API OpenAI ne contient pas de choix valides : " +
+          JSON.stringify(data)
       );
     }
 
@@ -38,10 +47,12 @@ export async function handler(event, context) {
       body: JSON.stringify({ reply: data.choices[0].message.content }),
     };
   } catch (error) {
-    console.error("Erreur avec l'API OpenAI :", error);
+    console.error("Erreur avec l'API OpenAI :", error.message, error.stack);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Erreur lors de l'appel à l'API OpenAI." }),
+      body: JSON.stringify({
+        error: `Erreur lors de l'appel à l'API OpenAI : ${error.message}`,
+      }),
     };
   }
 }
