@@ -673,8 +673,8 @@ footer a:hover {
 }
 
 .codec-avatar {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   background-color: rgba(0, 255, 0, 0.2);
   border: 3px solid #00ff00;
   padding: 10px;
