@@ -6,78 +6,58 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <title>Chatbot Metal Gear</title>
+    <title>Codec - Chatbot Metal Gear</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   </head>
+
+  <!-- Lecteur audio pour l'ambiance sonore -->
+  <audio id="background-audio" loop autoplay muted>
+    <source src="audio/Metal Gear Solid Theme.mp3" type="audio/mp3" />
+  </audio>
+
+  <div id="sound-prompt">
+    🎵 Cliquez pour activer le son
+    <button onclick="enableSound()">Activer le son</button>
+  </div>
+
+  <audio id="message-sound">
+    <source src="audio/codec-sound.mp3" type="audio/mp3" />
+  </audio>
+  <!-- Conteneur des particules -->
+  <div id="particles-js"></div>
+  <a href="index.html" class="metal-gear-button" id="back-button"
+  >Retour à l'accueil</a
   <body>
-    <header class="header-centered">
-      <div class="title-container">
-        <h1 class="glitch" data-text="METAL GEAR">METAL GEAR</h1>
-        <p class="subtitle">Discutez avec la légende</p>
-
-        <!-- Lecteur audio pour l'ambiance sonore -->
-        <audio id="background-audio" loop autoplay muted>
-          <source src="audio/Metal Gear Solid Theme.mp3" type="audio/mp3" />
-        </audio>
-
-        <div id="sound-prompt">
-          🎵 Cliquez pour activer le son
-          <button onclick="enableSound()">Activer le son</button>
+    <div class="codec-chat-container">
+      <div class="codec-header">
+        <div class="codec-left">
+          <img src="images/chris2.jpg" alt="User 1" class="codec-avatar" />
         </div>
-
-        <!-- Conteneur des particules -->
-        <div id="particles-js"></div>
-
-        <p class="highlight-text">
-          Avec votre Codec, Snake répond à toutes vos questions sur la saga
-          Metal Gear
-        </p>
-
-        <a href="index.html" class="metal-gear-button" id="back-button"
-          >Retour à l'accueil</a
-        >
-        <a href="#" class="metal-gear-button" id="fullscreen-button"
-          >Codec plein écran</a
-        >
-      </div>
-    </header>
-    <main>
-      <div class="codec-chat-container">
-        <button id="close-fullscreen" class="close-fullscreen-button">✖</button>
-        <div class="codec-header">
-          <div class="codec-left">
-            <img src="images/chris2.jpg" alt="User 1" class="codec-avatar" />
-          </div>
-          <div class="codec-center">
-            <p>PTT</p>
-            <div class="codec-bar"></div>
-            <p>140.85</p>
-          </div>
-          <div class="codec-right">
-            <img
-              src="images/solid_snake.jpg"
-              alt="User 2"
-              class="codec-avatar"
-            />
-          </div>
+        <div class="codec-center">
+          <p>PTT</p>
+          <div class="codec-bar"></div>
+          <p>140.85</p>
         </div>
-
-        <div class="codec-chat-window" id="chat-window">
-          <!-- Messages apparaîtront ici -->
-        </div>
-
-        <div class="codec-input">
-          <input
-            type="text"
-            id="user-input"
-            placeholder="Écrivez votre message..."
-          />
-          <button onclick="sendMessage()">Envoyer</button>
+        <div class="codec-right">
+          <img src="images/solid_snake.jpg" alt="User 2" class="codec-avatar" />
         </div>
       </div>
-    </main>
+
+      <div class="codec-chat-window" id="chat-window">
+        <!-- Les messages s'afficheront ici -->
+      </div>
+
+      <div class="codec-input">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Écrivez votre message..."
+        />
+        <button onclick="sendMessage()">Envoyer</button>
+      </div>
+    </div>
 
     <footer>
       <p>
@@ -89,10 +69,10 @@
         Metal Gear.
       </p>
     </footer>
+
     <script src="js/animations.js"></script>
     <script src="js/audio-controls.js"></script>
     <script src="js/button-sounds.js"></script>
-    <script src="js/loadPartials.js"></script>
     <script src="js/chatbot.js"></script>
   </body>
 </html>
