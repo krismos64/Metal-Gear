@@ -1,7 +1,8 @@
-const fetch = require("node-fetch");
-
 exports.handler = async (event, context) => {
   const { message } = JSON.parse(event.body);
+
+  // Importer node-fetch dynamiquement
+  const fetch = (await import("node-fetch")).default;
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -11,7 +12,7 @@ exports.handler = async (event, context) => {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4",
         messages: [
           {
             role: "system",
@@ -31,7 +32,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ reply: data.choices[0].message.content }),
     };
   } catch (error) {
-    console.error("Erreur avec l'API OpenAI:", error);
+    console.error("Erreur avec l'API OpenAI :", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Erreur lors de l'appel à l'API OpenAI." }),
