@@ -1,8 +1,7 @@
-exports.handler = async (event, context) => {
-  const { message } = JSON.parse(event.body);
+import fetch from "node-fetch";
 
-  // Importer node-fetch dynamiquement
-  const fetch = (await import("node-fetch")).default;
+export async function handler(event, context) {
+  const { message } = JSON.parse(event.body);
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -16,8 +15,7 @@ exports.handler = async (event, context) => {
         messages: [
           {
             role: "system",
-            content:
-              "Tu es Solid Snake, un expert de la série Metal Gear. Réponds aux questions avec un langage direct, comme dans les jeux. Si tu ne sais pas répondre, utilise un peu d'humour.",
+            content: "Tu es Solid Snake, un expert de la série Metal Gear.",
           },
           { role: "user", content: message },
         ],
@@ -38,4 +36,4 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ error: "Erreur lors de l'appel à l'API OpenAI." }),
     };
   }
-};
+}
