@@ -73,6 +73,18 @@
             <h3>Codec avec Snake</h3>
           </a>
         </div>
+      </div>
+      <div class="card" onclick="toggleAudio()">
+        <div class="card-image" style="background-image: url('images/podcast.jpg')"></div>
+        <h3>Podcast sur le site web!!</h3>
+      </div>
+      
+      <!-- Mini lecteur audio avec contrôles, visible sous la carte -->
+      <audio id="podcastAudio" controls style="width: 100%; margin-top: 10px;">
+        <source src="audio/podcast.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+
       </section>
     </main>
 

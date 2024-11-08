@@ -35,3 +35,12 @@ function enableSound() {
   audioElement.play();
   document.getElementById("sound-prompt").style.display = "none"; // Masque le message une fois cliqué
 }
+
+function toggleAudio() {
+  const audio = document.getElementById("podcastAudio");
+  if (audio.paused) {
+    audio.play(); // Lance la lecture si elle est en pause
+  } else {
+    audio.pause(); // Met en pause si elle est déjà en cours
+  }
+}
