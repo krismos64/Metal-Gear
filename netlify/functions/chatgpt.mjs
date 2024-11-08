@@ -11,7 +11,7 @@ export async function handler(event, context) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4-turbo", // ou "gpt-4" si c’est le bon modèle
+        model: "gpt-4", // ou "gpt-4" si c’est le bon modèle
         messages: [
           {
             role: "system",
