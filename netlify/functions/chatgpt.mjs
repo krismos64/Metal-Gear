@@ -25,6 +25,14 @@ export async function handler(event, context) {
     });
 
     const data = await response.json();
+    console.log("Réponse de l'API OpenAI :", data); // Log pour vérifier la réponse complète
+
+    if (!data.choices || !data.choices[0]) {
+      throw new Error(
+        "La réponse de l'API OpenAI ne contient pas de choix valides."
+      );
+    }
+
     return {
       statusCode: 200,
       body: JSON.stringify({ reply: data.choices[0].message.content }),
