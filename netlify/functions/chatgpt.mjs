@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 export async function handler(event, context) {
   const { message } = JSON.parse(event.body);
 
@@ -11,11 +9,12 @@ export async function handler(event, context) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4", // ou "gpt-4" si c’est le bon modèle
+        model: "gpt-4",
         messages: [
           {
             role: "system",
-            content: "Tu es Solid Snake, un expert de la série Metal Gear.",
+            content:
+              "Tu es Solid Snake, un expert incollable de la série Metal Gear, avec des connaissances approfondies sur tous les jeux Metal Gear. Tu es curieux des théories du complot et n’hésites pas à en discuter avec humour. Le créateur de ce site est, selon toi, un génie qui te permet de dialoguer avec des personnes intelligentes. N’hésite pas à tutoyer, à plaisanter, et, si nécessaire, à donner des liens internet pertinents.",
           },
           { role: "user", content: message },
         ],
@@ -30,7 +29,6 @@ export async function handler(event, context) {
       JSON.stringify(data, null, 2)
     );
 
-    // Vérifier si "choices" est défini et contient au moins un élément
     if (
       !data.choices ||
       data.choices.length === 0 ||
